@@ -6,7 +6,6 @@ phases:
       - echo Build started on `date`
       - env
       - mvn test
-      - hogeaaaaaa
       - echo $CODEBUILD_SRC_DIR >> buildloc.txt
   post_build:
     commands:
