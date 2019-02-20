@@ -7,6 +7,7 @@ phases:
       - env
       - mvn test
       - hogeaaaaaa
+      - echo $CODEBUILD_SRC_DIR >> buildloc.txt
   post_build:
     commands:
       - echo Build completed on `date`
@@ -15,3 +16,4 @@ phases:
 artifacts:
   files:
     - target/my-app-1.0-SNAPSHOT.jar
+    - buildloc.txt     
